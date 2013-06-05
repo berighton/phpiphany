@@ -1,0 +1,2 @@
+This plugin will take care of simple database replication by capturing all DB changes that happened since the last sync
+A time can be scheduled when these changes are applied to a replicate database server.

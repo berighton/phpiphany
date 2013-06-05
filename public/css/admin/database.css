@@ -1,0 +1,304 @@
+#db {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	z-index: 9998;
+	overflow: hidden
+}
+
+#db * {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	font-size: inherit;
+	color: #000
+}
+
+/* COMMON */
+#db a {
+	text-decoration: none
+}
+
+#db .db-hidden {
+	display: none
+}
+
+#db .db-visible {
+	display: block
+}
+
+#db table {
+	border-collapse: collapse;
+	border-color: #888;
+	border: 1px solid #888
+}
+
+#db table tr.even {
+	background: #DEDEDE
+}
+
+#db table td,
+#db table th {
+	padding: 4px
+}
+
+#db table th {
+	background: #73705D;
+	color: #FFF
+}
+
+#db .clear {
+	clear: both
+}
+
+/* MAIN MENU */
+#db .db-main {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background: #151C24;
+	display: block;
+	float: left;
+	width: 100%
+}
+
+#db .db-main li {
+	float: left;
+	border-right: 1px solid #9CA68F
+}
+
+#db .db-main li a {
+	color: #FFF;
+	padding: 10px;
+	display: block;
+	float: left
+}
+
+#db .db-main li a:hover {
+	background: #403D32
+}
+
+#db .db-main li span {
+	background: orange;
+	padding: 0 4px;
+	font-weight: bold;
+	color: #000
+}
+
+/* GLOBALS SUBMENU */
+#db-globals-submenu {
+	border: 1px solid #403D32
+}
+
+#db-globals-submenu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background: #403D32;
+	display: block;
+	float: left;
+	width: 100%
+}
+
+#db-globals-submenu ul li {
+	float: left
+}
+
+#db-globals-submenu ul li a {
+	display: block;
+	float: left;
+	padding: 10px;
+	color: #FFF
+}
+
+#db-globals-submenu ul li a:hover {
+	background: #73705D
+}
+
+/* ENTRIES */
+#db .db-entry {
+	margin: 0;
+	border: 1px solid #666;
+	background: #9CA68F;
+	max-height: 600px;
+	overflow-y: auto;
+}
+
+#db .db-box {
+	background: #EEE;
+	padding: 5px;
+	border: 1px solid #151C24;
+	margin-bottom: 2px;
+	max-height: 405px;
+	overflow: auto;
+}
+
+#db #db-records-sq1{
+	overflow: auto;
+}
+
+#db .db-transaction {
+	background: #CCCC99
+}
+
+#db .db-counter {
+	background: #73705D;
+	padding: 5px;
+	border-right: 1px solid #000;
+	color: #DDD
+}
+
+#db .db-even .db-counter {
+	background: #252626
+}
+
+#db .db-data {
+	max-width: 100%;
+	padding: 5px
+}
+
+#db .db-error {
+	background: #CC3333;
+	color: #FFF;
+	font-weight: bold
+}
+
+#db .db-error pre,
+#db .db-error span,
+#db .db-error em,
+#db .db-error a {
+	font-weight: normal;
+	color: #FFF
+}
+
+#db .db-error a {
+	text-decoration: underline
+}
+
+#db .db-highlight {
+	background: orange
+}
+
+#db .db-actions {
+	padding: 2px;
+	background: #CDD8BF;
+	color: #151C24
+}
+
+#db .db-actions ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0
+}
+
+#db .db-actions ul li {
+	float: left;
+	display: block;
+	margin-right: 0px;
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding: 5px 5px 5px 28px
+}
+
+#db .db-actions ul li a {
+	color: #151C24;
+	text-decoration: underline
+}
+
+#db .db-time {
+	background-image: url('../../images/admin/clock.png')
+}
+
+#db .db-cache {
+	background-image: url('../../images/admin/cache.png');
+	background-color: #CCFF99;
+	color: #222;
+	border: 1px solid black
+}
+
+#db .db-top {
+	background-image: url('../../images/admin/top.png')
+}
+
+#db .db-close {
+	background-image: url('../../images/admin/close.png')
+}
+
+#db .db-records {
+	background-image: url('../../images/admin/records.png')
+}
+
+#db .db-affected {
+	background-image: url('../../images/admin/affected.png')
+}
+
+#db .db-explain {
+	background-image: url('../../images/admin/explain.png')
+}
+
+#db .db-backtrace {
+	background-image: url('../../images/admin/backtrace.png')
+}
+
+/* HIGHLIGHTING */
+#db .keyword {
+	font-weight: bold;
+	color: #990099;
+	text-transform: uppercase
+}
+
+#db .string {
+	font-weight: bold;
+	color: #008000
+}
+
+#db .symbol {
+	font-weight: bold;
+	color: #FF00FF
+}
+
+#db .indent {
+	padding: 0 0 0 20px
+}
+
+#db-successful-queries, #db-unsuccessful-queries, #db-globals, #db-globals-submenu {
+	max-height: 600px;
+	overflow-y: auto;
+}
+
+
+#db-successful-queries, #db-unsuccessful-queries, #db-globals, #db-globals-submenu,
+.db-entry, .db-records-table, .db-explain-table, .db-backtrace-table {
+	display: none
+}
+
+/* MINI CONSOLE */
+#db-mini {
+	position: fixed;
+	bottom: 0;
+	right: 1px;
+	z-index: 9999;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	display: block
+}
+
+#db-mini a {
+	background: #151C24 url('../../images/admin/db.gif') no-repeat 10px center;
+	display: block;
+	padding: 10px 10px 10px 30px;
+	color: #FFF;
+	text-decoration: none
+}
+
+#db-mini a span {
+	font-weight: bold;
+	background-color: #c40000;
+	padding: 0 5px 0 5px;
+	margin: 0px 4px 0 4px
+}

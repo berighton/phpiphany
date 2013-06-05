@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+
+	# First omit all the valid folder includes
+	RewriteRule ^js\/(.*)$ js/$1 [L]
+	RewriteRule ^css\/(.*)$ css/$1 [L]
+	RewriteRule ^icons\/(.*)$ icons/$1 [L]
+	RewriteRule ^images\/(.*)$ images/$1 [L]
+
+	# Now pass it on to our page handler
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^([A-Za-z0-9\_\-]+)\/(.*)\/(.*)$ index.php?controller=$1&action=$2&parms=$3 [L,QSA]
+	RewriteRule ^([A-Za-z0-9\_\-]+)\/(.*)$ index.php?controller=$1&action=$2 [L,QSA]
+	RewriteRule ^(.*)$ index.php?controller=$1 [L,QSA]
+
+</IfModule>

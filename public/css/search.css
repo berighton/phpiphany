@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+#counter {
+	color: #626262;
+	height: 18px;
+	text-align: center;
+}
+
+#show_results {
+	width: 90%;
+	position: relative;
+	margin: auto;
+}
+
+/* Body
+------------ */
+body {
+  margin: 0;
+  padding: 60px 20px;
+  font: 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: transparent;
+}
+footer {
+	color: #fff;
+}
+html {
+  background: #4786b3; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0Nzg2YjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMmU1NjczIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-radial-gradient(center, ellipse cover,  #4786b3 0%, #2e5673 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#4786b3), color-stop(100%,#2e5673)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #4786b3 0%,#2e5673 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #4786b3 0%,#2e5673 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #4786b3 0%,#2e5673 100%); /* IE10+ */
+  background: radial-gradient(center, ellipse cover,  #4786b3 0%,#2e5673 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4786b3', endColorstr='#2e5673',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Heading, body, links
+------------------------- */
+
+h1,
+p {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  margin: 30px 0 0;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+a.footer {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.footer:hover {
+	text-decoration: underline;
+}
+
+
+/* Responsive layout
+-------------------------------------------------- */
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+  /* punt button to below search field */
+  .search-404 input[type=text] {
+    display: block;
+    width: 90%;
+    margin: 0 auto 10px;
+  }
+  /* widen search button */
+  .search-404 .btn {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}
+
+/* For screens larger than the minimum dimensions, bump up the illustration size and fix to bottom of screen */
+@media screen and (min-width: 640px) and (min-height: 700px) {
+  .canvas {
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    left: 0;
+  }
+  .illustration {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    padding: 60px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Search class for the search controller */
+.search {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.search #search_label {
+  display: none;
+  display: block \9; /* only show for IE */
+  margin: 0 0 9px;
+  text-align: center;
+}
+.search .btn,
+.search input[type=text] {
+  padding: 9px;
+  font-size: 18px;
+  vertical-align: middle;
+  border-color: #1c5671;
+}
+.search input:focus {
+	border-color: rgba(82, 168, 236, 0.8);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	outline: 0;
+	outline: thin dotted \9;
+	/* IE6-9 */
+}
+.search .btn {
+  padding: 10px 14px;
+  *padding: 7px 14px 6px;
+  line-height: 20px;
+	margin-top: -10px;
+}
+.search input[type=text] {
+  width: 410px;
+height: 26px;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.25);
+     -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.25);
+          box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.25);
+}
+.search input[type=text]:focus {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 0 10px rgba(255,255,255,.75);
+     -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 0 10px rgba(255,255,255,.75);
+          box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 0 10px rgba(255,255,255,.75);
+}

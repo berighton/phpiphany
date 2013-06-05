@@ -1,0 +1,46 @@
+# Disallow directory listing
+Options -Indexes
+
+# Follow symbolic links
+Options +FollowSymLinks
+
+# Default handler
+DirectoryIndex index.php
+
+# Rewrite rules (works on LAMP only for now)
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+
+	# Modify the RewriteBase if you are using phpiphany in a subdirectory and the rewrite rules are not working properly
+	# RewriteBase /phpiphany
+
+	# Enable php (non-cgi, aka. 'module') for every file extension
+	# For web servers using PHP as apache module
+	AddType application/x-httpd-php5 .htm .html .php .blog .comment .inc
+	# For web servers running PHP as CGI:
+	AddHandler php5-script .htm .html .php .blog .comment .inc
+
+	# Disable global EGPCS (Environment, GET, POST, Cookie, Server) variables
+	php_value register_globals off
+
+	# Disable session id's in the URL
+	php_value session.use_trans_sid 0
+	php_flag session.use_trans_sid off
+
+	# Manage the upload size
+	php_value upload_max_filesize 12M
+	php_value post_max_size 12M
+	php_value memory_limit 256M
+
+	# Set date/time zone
+	php_value date.timezone America/New_York
+
+	# Everything else should go to the public folder
+	RewriteRule  ^$  public/    [L]
+	RewriteRule ^([A-Za-z0-9\_\-]+)\/(.*)$ public/$1/$2 [L,QSA]
+	RewriteRule (.*) public/$1/  [L]
+
+</IfModule>
+
+# Custom error pages
+ErrorDocument 404 public/404.php
